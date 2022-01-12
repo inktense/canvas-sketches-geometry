@@ -2,6 +2,10 @@
 Geometry designs using canvas-sketch library.
 
 ----------------------------------------------------------------
+
+## Pre-requisites
+
+----------------------------------------------------------------
 ## Art created
 **Triangle columns**
 
