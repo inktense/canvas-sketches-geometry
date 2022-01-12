@@ -1,2 +1,8 @@
 # canvas-sketches-geometry
-Geometry designs using canvas-sketch library
+Geometry designs using canvas-sketch library.
+
+----------------------------------------------------------------
+## Art created
+**Triangle columns**
+
+![Triangle columns](output/triangleColumns/2022.01.12-21.01.24.png)
