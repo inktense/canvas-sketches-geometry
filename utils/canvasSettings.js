@@ -6,5 +6,5 @@ export const addMarginToCanvas = (width, height) => {
   const margX = (width - gridW) * 0.5;
   const margY = (height - gridH) * 0.5;
 
-  return { gridW, margX, margY };
+  return { gridW, gridH, margX, margY };
 };

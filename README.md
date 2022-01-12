@@ -10,3 +10,7 @@ Geometry designs using canvas-sketch library.
 **Triangle columns**
 
 ![Triangle columns](output/triangleColumns/2022.01.12-21.01.24.png)
+
+**Triangles in sqare cells**
+
+![Triangles in sqare cells](output/triangleSqareCells/2022.01.12-21.52.03.png)
