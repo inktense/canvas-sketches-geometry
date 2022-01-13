@@ -27,3 +27,7 @@ canvas-sketch index.js --output=output/
 **Qadruple triangles in sqare cells**
 
 ![Triangles in sqare cells](output/qadrupleTrianglesSqareCells/2022.01.13-17.53.30.png)
+
+**Sqare segments**
+
+![Sqare segments](output/sqareSegments/2022.01.13-20.50.19.png)

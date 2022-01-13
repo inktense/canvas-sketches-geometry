@@ -6,7 +6,6 @@ import { greyScale, mainColor } from "../common/colors";
 const generateCellContent = (params) => {
   const { context, margX, margY, offsetW, offsetH, cellW } = params;
   const middleCoordinate = cellW / 2;
-  const color = offsetW % 2 ? random.pick(greyScale) : mainColor;
 
   // Create upper triangle
   context.beginPath();
