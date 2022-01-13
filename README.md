@@ -5,6 +5,15 @@ Geometry designs using canvas-sketch library.
 
 ## Pre-requisites
 
+- [canvas-sketch](https://github.com/mattdesl/canvas-sketch).
+----------------------------------------------------------------
+
+## Commands 
+
+Expoting images 
+```
+canvas-sketch index.js --output=output/
+```
 ----------------------------------------------------------------
 ## Art created
 **Triangle columns**
@@ -14,3 +23,7 @@ Geometry designs using canvas-sketch library.
 **Triangles in sqare cells**
 
 ![Triangles in sqare cells](output/triangleSqareCells/2022.01.12-21.52.03.png)
+
+**Qadruple triangles in sqare cells**
+
+![Triangles in sqare cells](output/qadrupleTrianglesSqareCells/2022.01.13-17.53.30.png)

@@ -2,6 +2,7 @@ import canvasSketch from "canvas-sketch";
 
 import { generateTriangeColumns } from "./sketches/triangleColumns";
 import { generateTriangeSqareCells } from "./sketches/triangleSqareCells";
+import { generateQadrupleTriangleSqareCells } from "./sketches/qadrupleTrianglesSqareCells";
 
 const settings = {
   dimensions: [1080, 1080],
@@ -13,7 +14,8 @@ const sketch = () => {
     context.fillRect(0, 0, width, height);
 
     //generateTriangeColumns(context, width, height)
-    generateTriangeSqareCells(context, width, height);
+    //generateTriangeSqareCells(context, width, height);
+    generateQadrupleTriangleSqareCells(context, width, height);
   };
 };
 
