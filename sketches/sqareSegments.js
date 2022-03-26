@@ -12,8 +12,6 @@ export const generateSqareSegments = (context, width, height) => {
   const quarterW = (halfW - margX) / 2;
   const quarterH = (halfH - margY) / 2;
 
-  console.log("gridW, gridH => ", gridW, gridH, "half => ", quarterW, halfH);
-
   //--------------------------------------------------------------
   // Outer triangles
   //--------------------------------------------------------------
