@@ -10,6 +10,10 @@ Geometry designs using canvas-sketch library.
 
 ## Commands 
 
+Start project 
+```
+canvas-sketch index.js
+```
 Expoting images 
 ```
 canvas-sketch index.js --output=output/
@@ -31,3 +35,9 @@ canvas-sketch index.js --output=output/
 **Sqare segments**
 
 ![Sqare segments](output/sqareSegments/2022.01.13-20.50.19.png)
+
+----------------------------------------------------------------
+
+## Documentation 
+
+[globalCompositeOperation](!https://www.w3schools.com/tags/canvas_globalcompositeoperation.asp)

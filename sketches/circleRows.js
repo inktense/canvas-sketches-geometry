@@ -1,91 +1,67 @@
 import { addMarginToCanvas } from "../utils/canvasSettings";
-import { random, math } from "canvas-sketch-util";
+import { random } from "canvas-sketch-util";
 
-import { greyScale, mainColor } from "../common/colors";
+import { greyScale } from "../common/colors";
 
-function drawCircle(col, row, cellW, cellH, context, margX, margY) {
-  // i % 4 = 0, 1, 2, 3
-  // const col = i % cols;
-  // // Math.floor(i / 4) = 0, 0, 0, 0, 1, 1, 1, 1;
-  // const row = Math.floor(i / cols);
-  const offsetW = cellW * col;
-  const offsetH = cellH * row;
-
+function drawCircle(context, x, y, radius) {
   context.beginPath();
-  context.arc(
-    margX + offsetW + cellW / 2,
-    margY + offsetH + cellH / 2,
-    cellW / 2,
-    0,
-    2 * Math.PI,
-    false
-  );
-  context.fillStyle = mainColor;
-  context.stroke();
+  context.arc(x, y, radius, 0, 2 * Math.PI, false);
+  context.fillStyle = random.pick(greyScale);
+  context.fill();
 }
 
 export const generateCircleRows = (context, width, height) => {
   const { gridW, gridH, margX, margY } = addMarginToCanvas(width, height);
-  const cols = 4;
-  const rows = 4;
+  const cols = 5;
+  const rows = 5;
   const cellW = gridW / cols;
   const cellH = gridH / rows;
-
+ 
   const numCells = cols * rows;
-  context.globalCompositeOperation="source-in";
   for (let i = 0; i < numCells; i++) {
     // i % 4 = 0, 1, 2, 3
     const col = i % cols;
     // // Math.floor(i / 4) = 0, 0, 0, 0, 1, 1, 1, 1;
     const row = Math.floor(i / cols);
-   // drawCircle(col, row, cellW, cellH, context, margX, margY);
+    // drawCircle(col, row, cellW, cellH, context, margX, margY);
     const offsetW = cellW * col;
     const offsetH = cellH * row;
 
-    context.beginPath();
-   
-    context.arc(
-      margX + offsetW + cellW / 2,
-      margY + offsetH + cellH / 2,
-      cellW / 2,
-      0,
-      2 * Math.PI,
-      false
-    );
-    context.fillStyle = mainColor;
-    context.fill();
+    // The source image is combined by using an exclusive OR with the destination image
+    context.globalCompositeOperation = "xor";
 
-    context.stroke();
+ 
+
+    const x = margX + offsetW + cellW / 2;
+    const y = margY + offsetH + cellH / 2;
+    const radius = cellW / 2;
+
+    drawCircle(context, x, y, radius);
+    
+    
   }
-
-  const cols2 = 5;
-  const rows2 = 5;
-  const numCells2 = cols2 * rows2;
-  for (let i = 0; i < numCells2; i++) {
+  
+  context.globalCompositeOperation="lighter"
+ // context.globalAlpha=.2;
+  const numCellsSecond = (cols + 1) * (rows + 1);
+  for (let i = 0; i < numCellsSecond; i++) {
     // i % 4 = 0, 1, 2, 3
-    const col = i % cols2;
+    const col = i % (cols + 1);
     // Math.floor(i / 4) = 0, 0, 0, 0, 1, 1, 1, 1;
-    const row = Math.floor(i / cols2);
+    const row = Math.floor(i / (cols + 1));
 
- // drawCircle(col, row, cellW, cellH, context, margX, margY);
-const offsetW = cellW * col;
+    const offsetW = cellW * col;
     const offsetH = cellH * row;
 
-    const a = offsetW * col;
-    const b = offsetH * row;
-    console.log(col, row, a, i);
-    context.beginPath();
-    context.arc(
-      margX + offsetW,
-      margY + offsetH,
-      cellW / 2,
-      0,
-      2 * Math.PI,
-      false
-    );
-    context.fillStyle = mainColor;
-    context.stroke();
+    const x = margX + offsetW;
+    const y = margY + offsetH;
+    const radius = cellW / 2;
+
+    drawCircle(context, x, y, radius);
+    context.globalCompositeOperation="lighter"
   }
 
-  console.log("here", gridW, cellH, Math.PI);
+
+
+ // context.fillStyle = "white";
 };

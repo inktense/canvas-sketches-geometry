@@ -22,23 +22,5 @@ const sketch = () => {
     generateCircleRows(context, width, height);
   };
 };
-// const settings = {
-//   dimensions: [1080, 1080],
-// };
-
-// const sketch = () => {
-//         //generateTriangeColumns(context, width, height)
-//     //generateTriangeSqareCells(context, width, height);
-//     //generateQadrupleTriangleSqareCells(context, width, height);
-//     //generateSqareSegments(context, width, height);
-//    // const sketch2 = generateCircleRows(context, width, height);
-
-//   return ({ context, width, height }) => {
-//    context.fillStyle = "white";
-//    context.fillRect(0, 0, width, height);
-//    generateCircleRows(context, width, height);
-
-//   };
-// };
 
 canvasSketch(sketch, settings);
