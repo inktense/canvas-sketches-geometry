@@ -12,8 +12,8 @@ function drawCircle(context, x, y, radius) {
 
 export const generateCircleRows = (context, width, height) => {
   const { gridW, gridH, margX, margY } = addMarginToCanvas(width, height);
-  const cols = 5;
-  const rows = 5;
+  const cols = 7;
+  const rows = 7;
   const cellW = gridW / cols;
   const cellH = gridH / rows;
 
