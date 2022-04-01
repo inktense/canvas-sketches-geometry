@@ -36,6 +36,10 @@ canvas-sketch index.js --output=output/
 
 ![Sqare segments](output/sqareSegments/2022.01.13-20.50.19.png)
 
+**Circle rows**
+
+![Sqare segments](output/circleRows/2022.04.01-21.16.30.png)
+
 ----------------------------------------------------------------
 
 ## Documentation 

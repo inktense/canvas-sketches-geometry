@@ -20,6 +20,7 @@ const sketch = () => {
     //generateQadrupleTriangleSqareCells(context, width, height);
    // generateSqareSegments(context, width, height);
     generateCircleRows(context, width, height);
+
   };
 };
 
