@@ -1,12 +1,12 @@
 import { addMarginToCanvas } from "../utils/canvasSettings";
 import { random } from "canvas-sketch-util";
 
-import { retroColors } from "../common/colors";
+import { retroColors, retroHalfColors } from "../common/colors";
 
 function drawCircle(context, x, y, radius) {
   context.beginPath();
   context.arc(x, y, radius, 0, 2 * Math.PI, false);
-  context.fillStyle = random.pick(retroColors);
+  context.fillStyle = random.pick(retroHalfColors);
   context.fill();
 }
 
