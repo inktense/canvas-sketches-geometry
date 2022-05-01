@@ -24,7 +24,6 @@ export const generateCircleRows = (context, width, height) => {
     const col = i % cols;
     // // Math.floor(i / 4) = 0, 0, 0, 0, 1, 1, 1, 1;
     const row = Math.floor(i / cols);
-    // drawCircle(col, row, cellW, cellH, context, margX, margY);
     const offsetW = cellW * col;
     const offsetH = cellH * row;
 

@@ -5,6 +5,7 @@ import { generateTriangeSqareCells } from "./sketches/triangleSqareCells";
 import { generateQadrupleTriangleSqareCells } from "./sketches/qadrupleTrianglesSqareCells";
 import { generateSqareSegments } from "./sketches/sqareSegments";
 import { generateCircleRows } from "./sketches/circleRows";
+import { generateConcentricCircles } from "./sketches/concentricCircles";
 
 const settings = {
   dimensions: [1080, 1080],
@@ -18,8 +19,10 @@ const sketch = () => {
     //generateTriangeColumns(context, width, height)
     //generateTriangeSqareCells(context, width, height);
     //generateQadrupleTriangleSqareCells(context, width, height);
-   // generateSqareSegments(context, width, height);
-    generateCircleRows(context, width, height);
+    //generateSqareSegments(context, width, height);
+    //generateCircleRows(context, width, height);
+
+    generateConcentricCircles(context, width, height);
 
   };
 };
