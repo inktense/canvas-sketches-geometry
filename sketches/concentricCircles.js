@@ -1,7 +1,7 @@
 import { addMarginToCanvas } from "../utils/canvasSettings";
 import { random } from "canvas-sketch-util";
 
-import { a } from "../common/colors";
+import { palette1 } from "../common/colors";
 
 export const generateConcentricCircles = (context, width, height) => {
   const x = width / 2;
@@ -14,25 +14,25 @@ export const generateConcentricCircles = (context, width, height) => {
   while (radius > 0) {
     context.beginPath();
     context.arc(x, y, radius, 0, 1 * Math.PI, false);
-    context.fillStyle = random.pick(a);
+    context.fillStyle = random.pick(palette1);
     context.fill();
 
-    // context.beginPath();
-    // context.moveTo(x, y);
-    // context.arc(x, y, radius, 0, 0.5 * Math.PI, false);
-    // context.fillStyle = random.pick(a);
-    // context.fill();
+    context.beginPath();
+    context.moveTo(x, y);
+    context.arc(x, y, radius, 0, 0.5 * Math.PI, false);
+    context.fillStyle = random.pick(palette1);
+    context.fill();
 
     context.beginPath();
     context.arc(x, y, radius, 0, 1 * Math.PI, true);
-    context.fillStyle = random.pick(a);
+    context.fillStyle = random.pick(palette1);
     context.fill();
 
-    // context.beginPath();
-    // context.moveTo(x, y);
-    // context.arc(x, y, radius, 0, 1.5 * Math.PI, true);
-    // context.fillStyle = random.pick(a);
-    // context.fill();
+    context.beginPath();
+    context.moveTo(x, y);
+    context.arc(x, y, radius, 0, 1.5 * Math.PI, true);
+    context.fillStyle = random.pick(palette1);
+    context.fill();
 
     radius -= step;
   }
