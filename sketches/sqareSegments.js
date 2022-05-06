@@ -1,7 +1,7 @@
 import { addMarginToCanvas } from "../utils/canvasSettings";
 import { random } from "canvas-sketch-util";
 
-import { greyScale, mainColor } from "../common/colors";
+import { palette5, mainColor } from "../common/colors";
 
 export const generateSqareSegments = (context, width, height) => {
   const { gridW, gridH, margX, margY } = addMarginToCanvas(width, height);
@@ -17,7 +17,7 @@ export const generateSqareSegments = (context, width, height) => {
   //--------------------------------------------------------------
   // Create upper triangle
   context.beginPath();
-  context.fillStyle = random.pick(greyScale);
+  context.fillStyle = random.pick(palette5);
   context.moveTo(margX, margY);
   context.lineTo(margX + gridW, margY);
   context.lineTo(halfW, halfH);
@@ -26,7 +26,7 @@ export const generateSqareSegments = (context, width, height) => {
 
   // Create bottom triangle
   context.beginPath();
-  context.fillStyle = random.pick(greyScale);
+  context.fillStyle = random.pick(palette5);
   context.moveTo(margX + gridW, margY);
   context.lineTo(margX + gridW, margY + gridW);
   context.lineTo(halfW, halfH);
@@ -35,7 +35,7 @@ export const generateSqareSegments = (context, width, height) => {
 
   // Create right triangle
   context.beginPath();
-  context.fillStyle = random.pick(greyScale);
+  context.fillStyle = random.pick(palette5);
   context.moveTo(margX + gridW, margY + gridW);
   context.lineTo(margX, margY + gridW);
   context.lineTo(halfW, halfH);
@@ -44,7 +44,7 @@ export const generateSqareSegments = (context, width, height) => {
 
   // Create left triangle
   context.beginPath();
-  context.fillStyle = random.pick(greyScale);
+  context.fillStyle = random.pick(palette5);
   context.moveTo(margX, margY);
   context.lineTo(margX, margY + gridW);
   context.lineTo(halfW, halfH);
@@ -56,7 +56,7 @@ export const generateSqareSegments = (context, width, height) => {
   //--------------------------------------------------------------
   // Create upper triangle
   context.beginPath();
-  context.fillStyle = mainColor;
+  context.fillStyle = '#A5CAA8';
   context.moveTo(quarterW + margX, margY);
   context.lineTo(quarterW * 3 + margX, margY);
   context.lineTo(halfW, quarterH + margY);
@@ -65,7 +65,7 @@ export const generateSqareSegments = (context, width, height) => {
 
   // Create bottom triangle
   context.beginPath();
-  context.fillStyle = mainColor;
+  context.fillStyle = '#A5CAA8';
   context.moveTo(quarterW + margX, quarterH * 4 + margY);
   context.lineTo(quarterW * 3 + margX, quarterH * 4 + margY);
   context.lineTo(halfW, quarterH * 3 + margY);
@@ -74,7 +74,7 @@ export const generateSqareSegments = (context, width, height) => {
 
   // Create right triangle
   context.beginPath();
-  context.fillStyle = mainColor;
+  context.fillStyle = '#A5CAA8';
   context.moveTo(quarterW * 4 + margX, quarterH + margY);
   context.lineTo(quarterW * 4 + margX, quarterH * 3 + margY);
   context.lineTo(quarterW * 3 + margX, halfH);
@@ -83,7 +83,7 @@ export const generateSqareSegments = (context, width, height) => {
 
   // Create left triangle
   context.beginPath();
-  context.fillStyle = mainColor;
+  context.fillStyle = '#A5CAA8';
   context.moveTo(margX, quarterH + margY);
   context.lineTo(margX, quarterH * 3 + margY);
   context.lineTo(quarterW + margX, halfH);

@@ -1,7 +1,7 @@
 import { addMarginToCanvas } from "../utils/canvasSettings";
 import { random } from "canvas-sketch-util";
 
-import { greyScale, mainColor } from "../common/colors";
+import { palette2, mainColor } from "../common/colors";
 
 const generateCellContent = (params) => {
   const { context, margX, margY, offsetW, offsetH, cellW } = params;
@@ -9,7 +9,7 @@ const generateCellContent = (params) => {
 
   // Create upper triangle
   context.beginPath();
-  context.fillStyle = random.pick(greyScale);
+  context.fillStyle = random.pick(palette2);
   context.moveTo(margX + offsetW, margY + offsetH);
   context.lineTo(margX + cellW + offsetW, margY + offsetH);
   context.lineTo(
@@ -33,7 +33,7 @@ const generateCellContent = (params) => {
 
   // Create right triangle
   context.beginPath();
-  context.fillStyle = random.pick(greyScale);
+  context.fillStyle = random.pick(palette2);
   context.moveTo(margX + offsetW + cellW, margY + offsetH);
   context.lineTo(margY + cellW + offsetW, margX + cellW + offsetH);
   context.lineTo(
@@ -45,7 +45,7 @@ const generateCellContent = (params) => {
 
   // Create left triangle
   context.beginPath();
-  context.fillStyle = random.pick(greyScale);
+  context.fillStyle = random.pick(palette2);
   context.moveTo(margX + offsetW, margY + offsetH);
   context.lineTo(margY + offsetW, margX + cellW + offsetH);
   context.lineTo(
@@ -58,8 +58,8 @@ const generateCellContent = (params) => {
 
 export const generateQadrupleTriangleSqareCells = (context, width, height) => {
   const { gridW, gridH, margX, margY } = addMarginToCanvas(width, height);
-  const cols = 6;
-  const rows = 6;
+  const cols = 9;
+  const rows = 9;
   const cellW = gridW / cols;
   const cellH = gridH / rows;
 
